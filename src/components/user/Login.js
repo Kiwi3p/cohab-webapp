@@ -24,7 +24,7 @@ class Login extends React.Component {
         this.props.setCurrentUser(response.data);
         //save user id to browser local storage
         localStorage.setItem("loggedInUser", response.data._id);
-        this.props.history.push("/projects");
+        this.props.history.push("/");
       })
       .catch(() => {
         console.log("Invalid Login");
@@ -33,10 +33,11 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="flex-sign">
         <form onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
           <input
+            className="input-change"
             type="text"
             name="username"
             value={this.state.username}
@@ -44,12 +45,13 @@ class Login extends React.Component {
           />
           <label>Password:</label>
           <input
+            className="input-change"
             type="password"
             name="password"
             value={this.state.password}
             onChange={this.handleChange}
           />
-          <button>Login</button>
+          <button className="submit"><h2>Login</h2></button>
         </form>
         <p>
           Don't have account?

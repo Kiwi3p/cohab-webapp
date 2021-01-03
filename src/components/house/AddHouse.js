@@ -23,7 +23,7 @@ class AddHouse extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <form className="add-house-flex" onSubmit={this.handleFormSubmit}>
         <label>Title:</label>
         <input
           type="text"
@@ -32,7 +32,7 @@ class AddHouse extends React.Component {
           onChange={this.handleChange}
         />
 
-        <button>Create</button>
+        <button className="house-btn"><h1>Create</h1></button>
       </form>
     );
   }

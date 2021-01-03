@@ -2,6 +2,7 @@ import React from "react";
 import HousesService from "../../utils/api";
 import AuthService from "../../utils/auth";
 import SelectHouse from "../house/SelectHouse";
+import Navbottom from "../Navbottom";
 
 class ListUsers extends React.Component {
   state = {
@@ -45,12 +46,13 @@ class ListUsers extends React.Component {
       <div>
         {this.state.users.map((user, index) => {
           return (
-            <div key={index}>
+            <div className="flex-user" key={index}>
               <h1>{user.username}</h1>
               <SelectHouse user={user} houses={this.state.houses} />
             </div>
           );
         })}
+      <Navbottom />
       </div>
     );
   }

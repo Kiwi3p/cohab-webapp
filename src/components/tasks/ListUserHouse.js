@@ -53,23 +53,25 @@ class ListUserHouse extends React.Component {
   render() {
     return (
       //if no loaded --> load this
-      this.state.loaded ? (<div>
+      this.state.loaded ? (<div className="flex-sign-2">
         <form onSubmit={this.handleFormSubmit}>
           <label>Title:</label>
           <input
+          className="input-change"
             type="text"
             name="task"
             value={this.state.task}
             onChange={this.handleChange}
           />
           <select
+          className="input-change"
             name="selectedUser"
             onChange={this.handleChange}
             value={this.state.selectedUser}
           >
             {this.state.users.map((user, index) => {
               return (
-                <option value={user._id} key={index}>
+                <option className="input-change" value={user._id} key={index}>
                   {user.username}
                 </option>
               );
@@ -78,7 +80,7 @@ class ListUserHouse extends React.Component {
           <input type="date" name="date"
             value={this.state.date}
             onChange={this.handleChange}/>  
-          <button>Create</button>
+          <button className="task-btn"><h1>Create</h1></button>
         </form>
       </div>) : (<h1>loading</h1>) 
     )}

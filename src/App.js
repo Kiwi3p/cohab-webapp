@@ -13,6 +13,7 @@ import ListUserHouse from "./components/tasks/ListUserHouse";
 import ListTasks from "./components/tasks/ListTasks";
 import Home from "./components/Home"
 import HomeNoLogin from "./components/HomeNoLogin"
+import Success from "./components/success/success";
 
 
 class App extends React.Component {
@@ -43,9 +44,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" width="375" height="812">
         
-         <Navbar
+         <Navbar className="bring-to-top"
           loggedInUser={this.state.loggedInUser}
           setCurrentUser={this.setCurrentUser}
         /> 
@@ -112,6 +113,17 @@ class App extends React.Component {
             render={() => {
               if (localStorage.getItem("loggedInUser")) {
                 return <ListTasks />;
+              } else {
+                return <Redirect to="/login" />;
+              }
+            }}
+          />
+          <Route
+            exact
+            path="/house/success"
+            render={() => {
+              if (localStorage.getItem("loggedInUser")) {
+                return <Success />;
               } else {
                 return <Redirect to="/login" />;
               }

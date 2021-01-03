@@ -23,10 +23,11 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="flex-sign">
         <form onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
           <input
+            className="input-change"
             type="text"
             name="username"
             value={this.state.username}
@@ -34,12 +35,13 @@ class Signup extends React.Component {
           />
           <label>Password:</label>
           <input
+            className="input-change"
             type="password"
             name="password"
             value={this.state.password}
             onChange={this.handleChange}
           />
-          <input type="submit" value="Signup" />
+          <button className="submit" type="submit"><h2>Signup</h2></button>
         </form>
         <p>
           Already have account?
