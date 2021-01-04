@@ -15,8 +15,8 @@ class Navbottom extends React.Component {
                 </NavLink>
               </li>
               <li className="bottom-link">
-                <NavLink exact to="/house">
-                <img src="/img/other-tasks.svg" alt="Other Tasks"/>
+                <NavLink exact to="/house/user-house">
+                <img src="/img/other-tasks.svg" alt="Users"/>
                 </NavLink>
               </li>
               <li className="bottom-link">

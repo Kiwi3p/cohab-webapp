@@ -44,6 +44,7 @@ class ListUsers extends React.Component {
   render() {
     return (
       <div>
+        <div className="user-overflow">
         {this.state.users.map((user, index) => {
           return (
             <div className="flex-user" key={index}>
@@ -52,6 +53,7 @@ class ListUsers extends React.Component {
             </div>
           );
         })}
+        </div>
       <Navbottom />
       </div>
     );

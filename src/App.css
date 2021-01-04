@@ -233,6 +233,20 @@ z-index: 3;
     margin-bottom: 6px;
 }
 
+.add-house-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  width: 180px;
+  height: 42px;
+  left: 95px;
+  top: 632px;
+  background: #122F24;
+  border-radius: 30px;
+}
+
 .enter {
   display: flex;
   flex-direction: row;
@@ -619,7 +633,6 @@ margin: 0 35%;
     justify-content: center;
     padding: 20px;
     top: 200px;
-    position: absolute;
     right: 55px;
     transform: scale(1.2);
 }
@@ -681,16 +694,22 @@ margin: 0 25%;
   margin-bottom: 30px;
 }
 
+.user-overflow {
+  overflow: scroll;
+  width: 100%;
+  height: 650px;
+}
+
 .add-house-flex {
   display: flex;
-flex-direction: column;
-align-content: center;
-text-align: center;
-justify-content: center;
-padding: 20px;
-top: 200px;
-right: 89px;
-transform: scale(1.2);
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  width: 59%;
+  margin-left: 55px;
+  transform: scale(1.2);
 }
 
 .add-house-flex form {
@@ -705,17 +724,20 @@ transform: scale(1.2);
 
 .house-btn {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  padding: 10px;
-  position: absolute;
-  width: 180px;
-  height: 42px;
-  left: 4px;
-  top: 233px;
-  background: #122F24;
-  border-radius: 30px;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    /* position: absolute; */
+    width: 180px;
+    height: 42px;
+    margin-top: 57px;
+    margin-left: 20px;
+    top: 233px;
+    background: #122F24;
+    border-radius: 30px;
+    border:none;
 }
 
 .house-btn h1 {
